@@ -15,7 +15,7 @@ tags: [Markdown, Syntax]
 
 ## The second largest heading (an h2 tag)
 …
-###### The 6th largest heading (an h> tag)
+###### The 6th largest heading (an h6 tag)
 
 **Blockquotes**
 
@@ -29,7 +29,7 @@ tags: [Markdown, Syntax]
 
 **This text will be bold**
 
-Both **bold** and *italic* can use either a * or an _ around the text for seyling.
+Both **bold** and *italic* can use either a "*" or an "_" around the text for seyling.
 
 **Everyone _must_ attend the meeting at 5 o'clock today**
 
@@ -76,7 +76,7 @@ int main(int argc,char *argv[])
 ```
 **Links**
 
-Visit[GitHub](https://github.com),you'd write this in Markdown[GitHubHelp][1].
+Visit [GitHub](https://github.com),you'd write this in Markdown [GitHubHelp][1].
 [1]: https://help.github.com/articles/markdown-basics/
 
 
