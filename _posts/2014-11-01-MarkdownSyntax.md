@@ -7,14 +7,15 @@ category: demo
 tags: [Markdown, Syntax]
 ---
 
-## Markdown Syntax ## 
+## Markdown Syntax
 
 **Headings**
 
-# The largest heading (an <h1> tag)
-## The second largest heading (an <h2> tag)
+# The largest heading (an h1 tag)
+
+## The second largest heading (an h2 tag)
 …
-###### The 6th largest heading (an <h6> tag)
+###### The 6th largest heading (an h> tag)
 
 **Blockquotes**
 
@@ -25,24 +26,29 @@ tags: [Markdown, Syntax]
 **Styling text**
 
 *This text will be tialic*
+
 **This text will be bold**
 
 Both **bold** and *italic* can use either a * or an _ around the text for seyling.
+
 **Everyone _must_ attend the meeting at 5 o'clock today**
 
 **Lists**
 
 *unordered list*
+
 * Item1
 * Item2
 * Item3
 
 *Ordered lists*
+
 1. Item1
 2. Item2
 3. Item3
 
 *Nested lists*
+
 1. Item1
   1. item1
   2. item2
@@ -54,6 +60,7 @@ Both **bold** and *italic* can use either a * or an _ around the text for seylin
 **Code formating**
 
 *Inline formats*
+
 Here's an idea: why don't we take `SuperiorProject` and turn it into `**Reasonable** Projects`.
 
 *Multiple lines*
