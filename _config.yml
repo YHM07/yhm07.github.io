@@ -17,7 +17,7 @@ atom_path: /atom.xml
 rss_path: /rss.xml
 
 # Build settings
-markdown: radiscount
+markdown: rdiscount
 permalink: /:categories/:year-:month/:title.html
 
 # comment
