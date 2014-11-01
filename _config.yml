@@ -1,0 +1,43 @@
+# Site settings
+title: "H.M.Yang's Blog"
+description: "jekyll template demo."
+keywords: ""
+baseurl: ""
+url: "http:////yhm07.github.io"
+highlighter: pygments
+paginate: 5
+author:
+    name: H.M.Yang
+    github: YHM07
+    email:
+    gitcafe: YHM07
+    weibo: 
+qiniudn: //havee.qiniudn.com                # //{bucket}.qiniudn.com
+atom_path: /atom.xml
+rss_path: /rss.xml
+
+# Build settings
+markdown: radiscount
+permalink: /:categories/:year-:month/:title.html
+
+# comment
+comments:
+    duoshuo:
+        name:                               # short name
+        rcomments:
+            num: 10
+            avatar: 0
+            time: 0
+            title: 0
+            admin: 0
+            length: 26
+# 网站统计
+analytics:
+    baidu:
+        siteid:                             # 百度统计 js 代码后的字符串
+
+# blogroll
+blogroll: true
+brlist:
+    - text: "H.M.Yang's Space"
+      url : //yhm07.github.io/
