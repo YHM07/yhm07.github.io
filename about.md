@@ -15,4 +15,3 @@ category: "wiki"
 
 [1]: https://github.com/Ihavee/ihavee.github.io "Havee's Space"
 
-{% include comments.html %}
