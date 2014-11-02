@@ -8,3 +8,5 @@ YHM07.github.io
 ##致谢
 
 博客主题来自 [ihavee][1],感谢Havee的无私分享。
+
+[1]: https://github.com/Ihavee/ihavee.github.io "havee's space"
