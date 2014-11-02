@@ -1,7 +1,8 @@
 ---
 layout: page
 title: "About"
-description: "学习天地。"
+description: "学习天地"
+category: "wiki"
 ---
 
 # 学习天地 #
