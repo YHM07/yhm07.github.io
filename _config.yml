@@ -11,7 +11,7 @@ author:
     github: YHM07
     email:
     gitcafe: YHM07
-    weibo: 
+    weibo: YHM07
 qiniudn: //havee.qiniudn.com                # //{bucket}.qiniudn.com
 atom_path: /atom.xml
 rss_path: /rss.xml
@@ -41,3 +41,5 @@ blogroll: true
 brlist:
     - text: "H.M.Yang's Space"
       url : //yhm07.github.io/
+    - text: "StrayBirds"
+      url: //yhm07.github.io/StrayBirds/
