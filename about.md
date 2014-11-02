@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: "About"
 description: "学习天地"
 category: "wiki"
