@@ -12,7 +12,7 @@ author:
     email:
     gitcafe: YHM07
     weibo: YHM07
-qiniudn: //havee.qiniudn.com                # //{bucket}.qiniudn.com
+qiniudn:                        # //{bucket}.qiniudn.com
 atom_path: /atom.xml
 rss_path: /rss.xml
 
@@ -22,8 +22,9 @@ permalink: /:categories/:year-:month/:title.html
 
 # comment
 comments:
+    provider: duoshuo
     duoshuo:
-        name:                               # short name
+        name: YHM07                        # short name
         rcomments:
             num: 10
             avatar: 0
