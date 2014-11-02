@@ -7,8 +7,6 @@ category: demo
 tags: [Markdown, Syntax]
 ---
 
-## Markdown Syntax
-
 **Headings**
 
 # The largest heading (an h1 tag)
