@@ -14,6 +14,7 @@ tags: [ubuntu, MediaWiki]
 
 ## Install pre-requisites ##
 首先安装LAMP(Linux,Apache2,MySQL,PHP)服务。
+
 `sudo apt-get install tasksel`
 `sudo tasksel install lamp-server`
 在安装lamp-server过程当中要进行以下配置:
@@ -38,6 +39,7 @@ tags: [ubuntu, MediaWiki]
 
 [Again](http://localhost/wiki).Follow the setup instructions.
 然后依次进行直到*Connect to database*.
+
 * MySQL settings
 	- Database host: localhost
 	- Identify this Wiki
