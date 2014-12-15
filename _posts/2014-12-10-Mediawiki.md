@@ -14,9 +14,10 @@ tags: [ubuntu, MediaWiki]
 
 ## Install pre-requisites ##
 首先安装LAMP(Linux,Apache2,MySQL,PHP)服务。
-
-`sudo apt-get install tasksel`
-`sudo tasksel install lamp-server`
+```
+sudo apt-get install tasksel
+sudo tasksel install lamp-server
+```
 在安装lamp-server过程当中要进行以下配置:
 	* Configuring mysql-server 
 		- New password for the MySQL "root" user: admin
@@ -40,29 +41,29 @@ tags: [ubuntu, MediaWiki]
 [Again](http://localhost/wiki).Follow the setup instructions.
 然后依次进行直到*Connect to database*.
 
-* MySQL settings
-	- Database host: localhost
-	- Identify this Wiki
-		- Database name: wikidb
-		- Database table prefix: wiki_
-	- User account for installation
-		- Database username: root
-		- Database password: admin
-* Database settings
-	- Database account for web access
-		- use the same account as for installation
-	- storage engine
-		- InnoDB
-	- Database character set:
-		- Binary
-* Name of Wiki
-	- YHM's Blog
-* Administrator account
-	- Your username: admin
-	- password: root
-* Personal account
-	- Your username: YHM07
-	- password: admin
+	* MySQL settings
+		- Database host: localhost
+		- Identify this Wiki
+			- Database name: wikidb
+			- Database table prefix: wiki_
+		- User account for installation
+			- Database username: root
+			- Database password: admin
+	* Database settings
+		- Database account for web access
+			- use the same account as for installation
+		- storage engine
+			- InnoDB
+		- Database character set:
+			- Binary
+	* Name of Wiki
+		- YHM's Blog
+	* Administrator account
+		- Your username: admin
+		- password: root
+	* Personal account
+		- Your username: YHM07
+		- password: admin
 
 
 
