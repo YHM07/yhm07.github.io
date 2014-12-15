@@ -19,6 +19,7 @@ sudo apt-get install tasksel
 sudo tasksel install lamp-server
 ```
 在安装lamp-server过程当中要进行以下配置:
+
 	* Configuring mysql-server 
 		- New password for the MySQL "root" user: admin
 		- Repeat password for the MySQL "root" user: admin
