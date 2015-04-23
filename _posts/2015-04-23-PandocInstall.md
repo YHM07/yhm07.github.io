@@ -23,22 +23,37 @@ tags: [Pandoc Ubuntu14.04 64bit]
 	and 
 	`cd ~ && mv template.tex Templates`
 	然后，更改该模板为
-	>
-	\else % if luatex or xelatex
+	>\else % if luatex or xelatex
+
 	 \ifxetex
+	 
 	    \usepackage{mathspec}
+	    
 	    \usepackage{xltxtra,xunicode}
+	    
 	       \usepackage{xeCJK}
+	       
 	   %   \setCJKmainfont{Droid Sans Fallback}
+	   
 	   %   \setCJKsansfont{Droid Sans Fallback}
+	   
 	   %   \setCJKmonofont{Droid Sans Fallback}
+	   
 	       \setCJKmainfont{YaHei Consolas Hybrid}
+	       
 	       \setCJKsansfont{YaHei Consolas Hybrid}
+	       
 	       \setCJKmonofont{YaHei Consolas Hybrid}
+	       
 	\else
+	
 		\usepackage{fontspec}
-	\fi
+		
+	>\fi
+	
+
 	% 以上字体部分请使用`fc-list :lang=zh > lang`命令查看，
+	
 	% 选择自己喜欢的字体。通过更改以上部分输出pdf格式文件时就可以支持中文了。
 	
 7. edit ~/.bashrc 
