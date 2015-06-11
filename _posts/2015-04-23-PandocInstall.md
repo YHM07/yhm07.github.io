@@ -6,7 +6,7 @@ description: "How to install Pandoc on Ubuntu14.04 64bit"
 tags: [Pandoc Ubuntu14.04 64bit]
 ---
 
-# Pandoc Install #
+ How to install Pandoc on Ubuntu14.04 64 bit?
 
 <!-- more -->
 
