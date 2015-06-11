@@ -7,7 +7,6 @@ category: wiki
 tags: [Knowledge]
 ---
 
-**misunderstanding**
 <!--more-->
 
 1. 父母在，不远游，游必有方。 论语-里仁
