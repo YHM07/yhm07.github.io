@@ -7,7 +7,7 @@ category: Wiki
 tags: [ubuntu, MediaWiki]
 ---
 
-# Running MediaWiki on Ubuntu #
+Running MediaWiki on Ubuntu 
 
 <!-- more -->
 
