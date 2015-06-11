@@ -7,7 +7,8 @@ tags: [Pandoc Ubuntu14.04 64bit]
 ---
 
 # Pandoc Install #
-<!--more-->
+
+<!-- more -->
 
 1. install Pandoc
 	* 下载[pandoc][1],然后可以使用Software Center安装，或者*dpkg -i ***.deb* 
