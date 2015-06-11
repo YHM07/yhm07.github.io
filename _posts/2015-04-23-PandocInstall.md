@@ -6,6 +6,9 @@ description: "How to install Pandoc on Ubuntu14.04 64bit"
 tags: [Pandoc Ubuntu14.04 64bit]
 ---
 
+Pandoc Install
+
+
 1. install Pandoc
 	* 下载[pandoc][1],然后可以使用Software Center安装，或者*dpkg -i ***.deb* 
 2. Install texlive

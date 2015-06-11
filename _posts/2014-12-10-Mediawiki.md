@@ -9,6 +9,7 @@ tags: [ubuntu, MediaWiki]
 
 # Running MediaWiki on Ubuntu #
 
+
 **以下有关MediaWiki的安装参考[Community Help Wiki][1]**
 [1]: https://help.ubuntu.com/community/MediaWiki
 

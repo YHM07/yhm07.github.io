@@ -5,11 +5,12 @@ keywords: ""
 baseurl: ""
 url: "http:////yhm07.github.io"
 highlighter: pygments
+excerpt_separator: "\n\n"
 paginate: 5
 author:
     name: H.M.Yang
     github: YHM07
-    email:
+    email: hmyang07@gmail.com
     gitcafe: YHM07
     weibo: YHM07
 qiniudn:                        # //{bucket}.qiniudn.com
