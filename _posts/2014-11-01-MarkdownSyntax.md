@@ -8,8 +8,7 @@ tags: [Markdown, Syntax]
 ---
 
 Markdown Syntax
-
-
+<!--more-->
 
 **Headings**
 
