@@ -5,7 +5,6 @@ keywords: ""
 baseurl: ""
 url: "http:////yhm07.github.io"
 highlighter: pygments
-excerpt_separator: "\n\n"
 paginate: 5
 author:
     name: H.M.Yang
