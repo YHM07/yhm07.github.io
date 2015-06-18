@@ -7,7 +7,7 @@ category: "wiki"
 tags: [linux ]
 ---
 
-## Linux 有用命令介绍 ##
+Linux 有用命令介绍 
 
 <!-- more -->
 
