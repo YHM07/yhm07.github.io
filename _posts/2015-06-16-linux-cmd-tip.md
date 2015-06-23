@@ -12,6 +12,7 @@ Linux 有用命令介绍
 <!-- more -->
 
 1. 在其它目录运行一个命令，然后返回当前工作目录
+
 	如果你想在其它目录运行一个命令，然后返回当前工作目录，要实现这样的目地，你只需要将命令放在一个**圆括号**里。
 	`$ (cd ~; ls)`
 
@@ -31,9 +32,14 @@ Linux 有用命令介绍
 	**ranger** 是浏览文件系统的好帮手。
 
 4. sudo !!
+
 	sudo !! 以sudo的形式运行上一条命令。例如：
 	`apt-get install ranger` 一定会出现"Permission denied",**除非你已经登录了足够高权限的用户**
 	这是如果运行`sudo !!`，上一条命令就会变成`sudo apt-get install ranger`，*so nice*
 
-5. 未完待续。。。
+5. vim 用root方式保存文本
+
+	:w !sudo tee %
+
+ 未完待续。。。
  
