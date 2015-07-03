@@ -29,6 +29,7 @@ Linux 有用命令介绍
 	* Shift + Insert			– 向终端内粘贴文本
 
 3. 浏览文件系统
+
 	**ranger** 是浏览文件系统的好帮手。
 
 4. sudo !!
@@ -36,6 +37,7 @@ Linux 有用命令介绍
 	sudo !! 以sudo的形式运行上一条命令。例如：
 	`apt-get install ranger` 一定会出现"Permission denied",**除非你已经登录了足够高权限的用户**
 	这是如果运行`sudo !!`，上一条命令就会变成`sudo apt-get install ranger`，*so nice*
+
 5. vim 用root方式保存文本
 
 	`:w !sudo tee %`
@@ -45,6 +47,13 @@ Linux 有用命令介绍
 	而 %，是vim当中一个只读寄存器的名字，总保存着当前编辑文件的文件路径。
 	所以执行这个命令，就相当于从vim外部修改了当前编辑的文件.*good*
 
+6. 创建目录树
+
+	`mkdir -p project/{lib/ext,bin,src,doc/{html,info,pdf},demo/stat/test}`
+
+	*注：目录格式当中不要有空格，否则会与期望的相悖**
+
+
 
  未完待续。。。
- 
+
