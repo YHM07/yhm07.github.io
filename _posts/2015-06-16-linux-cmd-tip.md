@@ -36,6 +36,10 @@ Linux 有用命令介绍
 	sudo !! 以sudo的形式运行上一条命令。例如：
 	`apt-get install ranger` 一定会出现"Permission denied",**除非你已经登录了足够高权限的用户**
 	这是如果运行`sudo !!`，上一条命令就会变成`sudo apt-get install ranger`，*so nice*
+	命令`:w !{cmd}`，让 vim 执行一个外部命令{cmd}，然后把当前缓冲区的内容从 stdin 传入。
+	tee 是一个把 stdin 保存到文件的小工具。
+	而 %，是vim当中一个只读寄存器的名字，总保存着当前编辑文件的文件路径。
+	所以执行这个命令，就相当于从vim外部修改了当前编辑的文件.
 
 5. vim 用root方式保存文本
 
