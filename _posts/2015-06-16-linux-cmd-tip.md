@@ -51,7 +51,7 @@ Linux 有用命令介绍
 
 	`mkdir -p project/{lib/ext,bin,src,doc/{html,info,pdf},demo/stat/test}`
 
-	*注：目录格式当中不要有空格，否则会与期望的相悖**
+	**注：目录格式当中不要有空格，否则会与期望的相悖**
 
 
 
