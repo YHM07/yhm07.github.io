@@ -32,6 +32,9 @@ Linux 有用命令介绍
 
 	**ranger** 是浏览文件系统的好帮手。
 
+	ranger 用 Python 完成，默认为使用 Vim 风格的按键绑定，比如 hjkl（上下左右），dd（剪切），yy（复制）等等。
+	功能很全，扩展/可配置性也非常不错。类似MacOS X下Finder（文件管理器）的多列文件管理方式。支持多标签页。实时预览文本文件和目录.
+
 4. sudo !!
 
 	sudo !! 以sudo的形式运行上一条命令。例如：
@@ -53,6 +56,26 @@ Linux 有用命令介绍
 
 	**注：目录格式当中不要有空格，否则会与期望的相悖**
 
+7. 重复上次命令行的参数
+
+	`ALT+.` or `ESC+.`
+
+8. 替换前一条命令里的部分字符串
+
+	`^old^new`
+
+9. 在远程机器上运行一段脚本
+
+	`ssh user@server bash < /path/to/local/script.sh`
+
+10. 比较一个远程文件和本地文件
+
+	`ssh user@host cat /path/to/remoteile | diff /path/to/localfile -`
+
+11. vim 一个远程文件
+
+	`vim scp://username@host//path/to/file`
+	
 
 
  未完待续。。。
