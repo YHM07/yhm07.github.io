@@ -27,6 +27,11 @@ Linux 有用命令介绍
 	* ALT   + Backspace			– 删除前一个单词
 	* CTRL  + W					– 剪切光标后一个单词
 	* Shift + Insert			– 向终端内粘贴文本
+	* Ctrl  + R					- 在历史命令中搜索
+	
+	`man readine`				# 查看bash中的默认热键绑定
+	`man ascii`					# 获得一个ASCII表格
+
 
 3. 浏览文件系统
 
