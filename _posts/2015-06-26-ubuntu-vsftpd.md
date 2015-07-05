@@ -12,13 +12,19 @@ ubuntu14.04 搭建FTP服务器 -- vsftpd的安装和配置
 <!-- more -->
 
 1. 更新源列表
+
 	`sudo apt-get update`
+
 2. 安装vsftpd
+
 	`sudo apt-get install vsftpd`
+
 3. 测试vsftpd是否安装成功，并顺利启动
+
 	`pgrep vsftpd`,如果显示一个数字，表示vsftpd服务已经安装成功，并且顺利启动。
 	该数字就是vsftpd服务的进程号。如果没有任何线索，可能服务并没有顺利启动，或者
 	没有安装成功。*请自行查明原因*.
+
 4. FTP服务需求
 	* vsftpd 使用stand alone 的方式启动。（或 super daemon）
 	* 禁止匿名用户访问
