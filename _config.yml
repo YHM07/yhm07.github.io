@@ -3,7 +3,7 @@ title: "H.M.Yang's Blog"
 description: "jekyll template demo."
 keywords: ""
 baseurl: ""
-url: "http:////yhm07.github.io"
+url: "//yhm07.github.io"
 highlighter: pygments
 paginate: 5
 author:
