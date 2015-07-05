@@ -17,11 +17,11 @@ atom_path: /atom.xml
 rss_path: /rss.xml
 
 # Build settings
-# markdown: rdiscount
-markdown: redcarpet
-redcarpet:
-    extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
-permalink: /:categories/:year-:month/:title.html
+markdown: rdiscount
+# markdown: redcarpet
+# redcarpet:
+#     extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
+# permalink: /:categories/:year-:month/:title.html
 
 assets_path: /assets
 sass:
