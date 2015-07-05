@@ -8,20 +8,31 @@
       {% include header.html %}
 
       <article class="wrapper">
-      <div class="raw">
-        <div id="search-loader" style="display:none;text-align:center">
-          <img src="/style/img/loading.gif">
+        <div id="search-loader" class="img-wrap">
+          <div class="loading">
+            <img src="{{ site.assets_path }}/img/loading.png">
+          </div>
         </div>
-        {{ content }}
-      </div>
+        <div class="row clearfix">
+          {{ content }}
+        </div>
       </article>
 
       {% include footer.html %}
     </div>
 
-    <script src="{{ ASSET_PATH }}/style/js/jquery.min.js"></script>
-    <script src="{{ ASSET_PATH }}/style/js/bootstrap.min.js"></script>
-    <script src="{{ ASSET_PATH }}/style/js/webcore.js"></script>
+    <script src="{{ site.assets_path }}/js/jquery.min.js"></script>
+    <script src="{{ site.assets_path }}/js/bootstrap.min.js"></script>
+    <script src="{{ site.assets_path }}/js/webcore.js"></script>
+    <script src="{{ site.assets_path }}/js/jquery.qrcode.min.js"></script>
+
+    <script type="text/javascript">
+      $("#code").qrcode({
+        width: 150,
+        height: 150,
+        text: "http:{{ site.url }}{{ page.url }}"
+      });
+    </script>
 
     {% include baidu-analytics.html %}
     {% if site.comments.duoshuo.name %}
