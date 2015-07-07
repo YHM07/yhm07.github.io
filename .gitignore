@@ -6,3 +6,8 @@ Thumbs.db
 !.gitkeep
 
 .sass-cache
+
+qrsync
+
+qiniu.json
+_qiniu.json
