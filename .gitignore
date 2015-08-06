@@ -1,4 +1,5 @@
 _site
+.site
 
 Thumbs.db
 .DS_Store
