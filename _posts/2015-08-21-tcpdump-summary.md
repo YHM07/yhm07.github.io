@@ -1,8 +1,10 @@
 ---
 layout: post
-title: "tcpdump summary"
-category:"linux"
-tags: [linux,tcpdump]
+title:  "tcpdump summary"
+keywords: ""
+description: ""
+category: "linux" 
+tags: [tcpdump, linux, cmd]
 ---
 
 **tcpdump**是一个抓包工具，用于抓取互联网上传输的数据包；更详细的说，
