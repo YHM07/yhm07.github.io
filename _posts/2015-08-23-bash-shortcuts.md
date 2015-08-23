@@ -11,7 +11,7 @@ tags: [bash, linux]
 
 <!-- more -->
 
-1. 编辑命令
+**编辑命令**
 
 > ctrl + a: 移到行首
 
@@ -47,7 +47,7 @@ tags: [bash, linux]
 
 > alt + backspace: 与ctrl+w类似
 
-2. 重新执行命令
+**重新执行命令**
 
 > ctrl + r: 逆向搜索历史命令
 
@@ -59,7 +59,7 @@ tags: [bash, linux]
 
 > alt + . or Esc + .: 使用上一条命令的最后一个参数
 
-3. 控制命令
+**控制命令**
 
 > ctrl + l: 清屏
 
@@ -73,7 +73,7 @@ tags: [bash, linux]
 
 > ctrl + z: 挂起命令
 
-4. Bang(!)命令
+**Bang(!)命令**
 
 > !!: 上一条命令
 
