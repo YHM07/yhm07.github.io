@@ -8,6 +8,7 @@ tags: [git]
 **Git** 分支管理策略
 
 参考：
+
 [A successful Git branching model][1]
 
 [Git分支管理策略][2]
@@ -88,7 +89,7 @@ tags: [git]
 ```
 	git checkout -b feature-x develop
 
-	# 功能分支命名可以采用feature-\*的形式
+	# 功能分支命名可以采用feature-*的形式
 ```
 
 - 将功能分支合并到develop分支
@@ -232,7 +233,6 @@ Git 使用规范流程
 
 	git push --forch origin develop
 
-	# git push 命令加上force参数，因为rebase后，分支历史改变，跟远程分支
-	不一定兼容，有可能需要强行推送。
+	# git push 命令加上force参数，因为rebase后，分支历史改变，跟远程分支不一定兼容，有可能需要强行推送。
 
 
