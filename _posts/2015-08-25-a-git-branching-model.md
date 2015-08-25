@@ -84,17 +84,16 @@ tags: [git]
 
 - 创建一个功能分支：
 
+	`git checkout -b feature-x develop`
 
-		git checkout -b feature-x developa
-
-		\# 功能分支命名可以采用feature-\*的形式
+	`\# 功能分支命名可以采用feature-\*的形式`
 
 - 将功能分支合并到develop分支
 
 
-		git checkout develop
+	`git checkout develop`
 
-		git merge --no-ff feature-x
+	`git merge --no-ff feature-x`
 
 - 删除feature分支
 
@@ -114,21 +113,19 @@ Develop和Master分支。它的命名，可以采用release-\*的形式。
 
 - 合并到master分支
 
+	`git checkout master`
 
-	git checkout master
+	`git merge --no-ff release-1.2`
 
-	git merge --no-ff release-1.2
+	`\# 对合并生成的新节点，做一个标签`
 
-	\# 对合并生成的新节点，做一个标签
-
-	git tag -a 1.2
+	`git tag -a 1.2`
 
 - 合并到develop分支
 
+	`git checkout develop`
 
-	git checkout develop
-
-	git merge --no-ff release-1.2
+	`git merge --no-ff release-1.2`
 
 - 删除预发布分支
 
@@ -148,19 +145,17 @@ bug修复分支
 
 - 合并到master分支
 
+	`git checkout master`
 
-	git checkout master
+	`git merge --no-ff fixbug-0.1`
 
-	git merge --no-ff fixbug-0.1
-
-	git tag -a 0.1.1
+	`git tag -a 0.1.1`
 
 - 合并到develop分支
 
+	`git checkout develop`
 
-	git checkout develop
-
-	git merge --no-ff fixbug-0.1
+	`git merge --no-ff fixbug-0.1`
 
 - 删除bug修复分支
 
@@ -190,7 +185,7 @@ Git 使用规范流程
 
 	git add --all
 
-	git status
+	git statu
 
 	git commit --verbose
 
