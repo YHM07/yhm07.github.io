@@ -6,6 +6,7 @@ tags: [git]
 ---
 
 **Git** 分支管理策略
+
 参考：
 [A successful Git branching model][1]
 
@@ -36,12 +37,14 @@ tags: [git]
 
 - Git创建Develop分支的命令
 	
-	git checkout -b develop master
+	`git checkout -b develop master`
 
-**创建develop分支是基于当前的master，如果当前就在master分支，则可以不写。
-如果当前分支HEAD指向的是其他分支，又希望基于master分支创建，就必须写master。**
+> 创建develop分支是基于当前的master，如果当前就在master分支，则可以不写。
+
+> 如果当前分支HEAD指向的是其他分支，又希望基于master分支创建，就必须写master。
 
 - 将develop分支发布到master分支
+
 
 	# 切换到master分支
 
@@ -51,9 +54,10 @@ tags: [git]
 
 	git merge --no-ff develop
 
-**--no-ff参数说明：默认情况下，Git执行“快进式合并(fast-farward merge),
-会直接将master分支执行develop分支。使用--no-ff参数，会执行正常合并，
-在master分支生成一个新节点。**
+> --no-ff参数说明：默认情况下，Git执行“快进式合并(fast-farward merge),
+会直接将master分支执行develop分支。
+
+> 使用--no-ff参数，会执行正常合并，在master分支生成一个新节点。**
 
 临时性分支
 ---
@@ -82,17 +86,20 @@ tags: [git]
 
 - 创建一个功能分支：
 
-	git checkout -b feature-x develop
+
+	git checkout -b feature-x developa
 
 	# 功能分支命名可以采用feature-\*的形式
 
 - 将功能分支合并到develop分支
+
 
 	git checkout develop
 
 	git merge --no-ff feature-x
 
 - 删除feature分支
+
 
 	git branch -d feature-x
 
@@ -106,9 +113,10 @@ Develop和Master分支。它的命名，可以采用release-\*的形式。
 
 - 创建一个预发布分支
 	
-	git checkout -b release-1.2 develop
+	`git checkout -b release-1.2 develop`
 
 - 合并到master分支
+
 
 	git checkout master
 
@@ -120,13 +128,14 @@ Develop和Master分支。它的命名，可以采用release-\*的形式。
 
 - 合并到develop分支
 
+
 	git checkout develop
 
 	git merge --no-ff release-1.2
 
 - 删除预发布分支
 
-	git branch -d release-1.2
+	`git branch -d release-1.2`
 
 bug修复分支
 ===
@@ -138,9 +147,10 @@ bug修复分支
 
 - 创建一个bug修复分支
 	
-	git checkout -b fixbug-0.1 master
+	`git checkout -b fixbug-0.1 master`
 
 - 合并到master分支
+
 
 	git checkout master
 
@@ -150,13 +160,14 @@ bug修复分支
 
 - 合并到develop分支
 
+
 	git checkout develop
 
 	git merge --no-ff fixbug-0.1
 
 - 删除bug修复分支
 
-	git branch -d fixbug-0.1
+	`git branch -d fixbug-0.1`
 
 
 Git 使用规范流程
