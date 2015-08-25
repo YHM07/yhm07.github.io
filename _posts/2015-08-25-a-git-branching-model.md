@@ -45,13 +45,15 @@ tags: [git]
 
 - 将develop分支发布到master分支
 
-	`\# 切换到master分支`
+```
+	\# 切换到master分支
 
-	`git checkout master`
+	git checkout master
 
-	`\# 对develop分支进行合并`
+	\# 对develop分支进行合并
 
-	`git merge --no-ff develop`
+	git merge --no-ff develop
+```
 
 > --no-ff参数说明：默认情况下，Git执行“快进式合并(fast-farward merge),
 会直接将master分支执行develop分支。使用--no-ff参数，会执行正常合并，在master分支生成一个新节点。
