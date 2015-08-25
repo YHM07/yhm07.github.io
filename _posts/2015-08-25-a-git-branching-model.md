@@ -46,18 +46,16 @@ tags: [git]
 - 将develop分支发布到master分支
 
 
-	# 切换到master分支
+	\# 切换到master分支
 
 	git checkout master
 
-	# 对develop分支进行合并
+	\# 对develop分支进行合并
 
-	git merge --no-ff develop
+	git merge --no-ff develop 
 
 > --no-ff参数说明：默认情况下，Git执行“快进式合并(fast-farward merge),
-会直接将master分支执行develop分支。
-
-> 使用--no-ff参数，会执行正常合并，在master分支生成一个新节点。**
+会直接将master分支执行develop分支。使用--no-ff参数，会执行正常合并，在master分支生成一个新节点。**
 
 临时性分支
 ---
@@ -89,7 +87,7 @@ tags: [git]
 
 	git checkout -b feature-x developa
 
-	# 功能分支命名可以采用feature-\*的形式
+	\# 功能分支命名可以采用feature-\*的形式
 
 - 将功能分支合并到develop分支
 
@@ -100,8 +98,7 @@ tags: [git]
 
 - 删除feature分支
 
-
-	git branch -d feature-x
+	`git branch -d feature-x`
 
 预发布分支
 ===
@@ -122,7 +119,7 @@ Develop和Master分支。它的命名，可以采用release-\*的形式。
 
 	git merge --no-ff release-1.2
 
-	# 对合并生成的新节点，做一个标签
+	\# 对合并生成的新节点，做一个标签
 
 	git tag -a 1.2
 
