@@ -85,16 +85,16 @@ tags: [git]
 - 创建一个功能分支：
 
 
-	git checkout -b feature-x developa
+		git checkout -b feature-x developa
 
-	\# 功能分支命名可以采用feature-\*的形式
+		\# 功能分支命名可以采用feature-\*的形式
 
 - 将功能分支合并到develop分支
 
 
-	git checkout develop
+		git checkout develop
 
-	git merge --no-ff feature-x
+		git merge --no-ff feature-x
 
 - 删除feature分支
 
