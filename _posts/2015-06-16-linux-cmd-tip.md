@@ -125,7 +125,7 @@ or
 	script -t 2> timing.log -a output.session
 ```
 
-然后会在当前目录生成文件,开始记录输入的命令，但此时该文件为空，
+然后会在当前目录生成文件**timing.log**和**ouput.session**,开始记录输入的命令，但此时该文件为空，
 只有退出**script**命令后，该文件才会存入数据。
 
 > timing.log 记录每个命令执行的时间信息
