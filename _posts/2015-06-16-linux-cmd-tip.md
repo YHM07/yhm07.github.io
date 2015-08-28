@@ -25,21 +25,36 @@ Linux 有用命令介绍
 
 ---
 
-> CTRL  + U					– 剪切光标前的内容
-> CTRL  + K 				– 剪切光标至行末的内容
-> CTRL  + Y 				– 粘贴
-> CTRL  + E 				– 移动光标到行末
-> CTRL  + A 				– 移动光标到行首
-> ALT   + F 				– 跳向下一个空格
-> ALT   + B 				– 跳回上一个空格
-> ALT   + Backspace			– 删除前一个单词
-> CTRL  + W					– 剪切光标后一个单词
-> Shift + Insert			– 向终端内粘贴文本
-> Ctrl  + R					- 在历史命令中搜索
-> ALT+. or ESC+.			# 重复上次命令行的参数
-> ^old^new					# 替换前一条命令里的部分字符串
-> man readine				# 查看bash中的默认热键绑定
-> man ascii					# 获得一个ASCII表格
+	CTRL  + U				– 剪切光标前的内容
+
+	CTRL  + K 				– 剪切光标至行末的内容
+
+	CTRL  + Y 				– 粘贴
+
+	CTRL  + E 				– 移动光标到行末
+
+	CTRL  + A 				– 移动光标到行首
+
+	ALT   + F 				– 跳向下一个空格
+
+	ALT   + B 				– 跳回上一个空格
+
+	ALT   + Backspace		– 删除前一个单词
+
+	CTRL  + W				– 剪切光标后一个单词
+
+	Shift + Insert			– 向终端内粘贴文本
+
+	Ctrl  + R				- 在历史命令中搜索
+
+	ALT+. or ESC+.			# 重复上次命令行的参数
+
+	^old^new				# 替换前一条命令里的部分字符串
+
+	man readine				# 查看bash中的默认热键绑定
+
+	man ascii				# 获得一个ASCII表格
+
 
 **详细说明可以参考：[Bash Shortcuts][1] 和 [Using CLI][2]**
 [1]: http://iplayboy.tk/linux/2015-08/bash-shortcuts.html
@@ -48,7 +63,7 @@ Linux 有用命令介绍
 **浏览文件系统**
 ===
 ---
-	**ranger** 是浏览文件系统的好帮手。
+**ranger** 是浏览文件系统的好帮手。
 
 ranger 用 Python 完成，默认为使用 Vim 风格的按键绑定，比如 hjkl（上下左右），dd（剪切），yy（复制）等等。功能很全，扩展/可配置性也非常不错。类似MacOS X下Finder（文件管理器）的多列文件管理方式。支持多标签页。实时预览文本文件和目录.
 
@@ -93,7 +108,7 @@ tee 是一个把 stdin 保存到文件的小工具。
 
 	reset 
 
-	or 
+or 
 
 	stty sane
 
@@ -106,17 +121,22 @@ tee 是一个把 stdin 保存到文件的小工具。
 
 - 记录终端会话
 
+```
 	script -t 2> timing.log -a output.session
+```
 
 然后会在当前目录生成文件,开始记录输入的命令，但此时该文件为空，
 只有退出**script**命令后，该文件才会存入数据。
 
 > timing.log 记录每个命令执行的时间信息
+
 > output.session  记录每个命令的输出
 
 - 回放记录的会话
 
+```
 	scriptreplay timing.log output.session
+```
 
 **注：timing.log output.session 可以被任何想要在自己终端上重放会话的人使用。**
 
