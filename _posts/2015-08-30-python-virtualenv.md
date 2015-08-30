@@ -7,6 +7,8 @@ tags: [Python, virtualenv, virtualenvwrapper]
 
 # Virtualenv
 
+---
+
 **[Virtualenv][1]**用于创建独立的Python环境，多个Python相互独立，互不影响，它能够：
 
 :one: 在没有权限的情况下安装新套件;
@@ -58,6 +60,8 @@ or
 
 # Virtualenvwapper
 
+---
+
 **[Virtualenvwapper][2]**是Virtualenv的扩展包，用于方便管理虚拟环境，它能够:
 
 :one: 将所有虚拟环境整合在一个目录下;
@@ -88,6 +92,7 @@ or
 ## 创建虚拟环境目录
 
 默认创建的虚拟环境位于`~/.virtualenvs`目录下，可以通过环境变量`$WORKON_HOME`来定制。如果`~/.virtualenvs/`目录存在,继续，否则创建目录用来存放虚拟环境。
+
 	mkdir $HOME/.virtualenvs
 
 ## 创建虚拟环境
@@ -142,6 +147,8 @@ or
 
 
 # 附录
+
+---
 
 > [The Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
 
