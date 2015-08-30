@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "创建Python虚拟环境---Virtualenv"
-category: 
-tags: []
+category: "Python"
+tags: [Python, virtualenv, virtualenvwrapper]
 ---
 
 # Virtualenv
