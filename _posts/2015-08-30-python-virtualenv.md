@@ -11,11 +11,11 @@ tags: [Python, virtualenv, virtualenvwrapper]
 
 **[Virtualenv][1]**用于创建独立的Python环境，多个Python相互独立，互不影响，它能够：
 
-:one: 在没有权限的情况下安装新套件;
+>  在没有权限的情况下安装新套件;
 
-:two: 不同应用可以使用不同的套件版本;
+>  不同应用可以使用不同的套件版本;
 
-:three: 套件升级不影响其他应用
+>   套件升级不影响其他应用
 
 [1]: https://virtualenv.pypa.io/en/latest/
 
@@ -64,11 +64,11 @@ or
 
 **[Virtualenvwapper][2]**是Virtualenv的扩展包，用于方便管理虚拟环境，它能够:
 
-:one: 将所有虚拟环境整合在一个目录下;
+> 将所有虚拟环境整合在一个目录下;
 
-:two: 管理(新增、删除、复制)虚拟环境
+> 管理(新增、删除、复制)虚拟环境
 
-:three: 切换虚拟环境
+> 切换虚拟环境
 
 [2]: http://virtualenvwrapper.readthedocs.org/en/latest/index.html
 
