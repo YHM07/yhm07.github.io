@@ -11,7 +11,6 @@ tags: [tcpdump, linux, cmd]
 tcpdump是一个嗅探器(sniffer),利用以太网的特性，通过将网卡适配器(NIC)
 置于混杂模式(promiscuous)来获取传输在网络中的信息。
 
-<!-- more -->
 
 **注：使用tcpdump抓包，需要工作在root账户下，因为只有root才有权限将网卡
 变更为"混杂模式"。**
@@ -42,6 +41,8 @@ tcpdump是一个嗅探器(sniffer),利用以太网的特性，通过将网卡适
 > 'port 53'
 
 > 过滤规则，指只抓取源端口或目的端口是53(DNS)的数据包。
+
+<!-- more -->
 
 - **不同选项**
 

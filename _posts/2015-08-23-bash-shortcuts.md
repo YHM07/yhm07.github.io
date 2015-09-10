@@ -9,7 +9,6 @@ tags: [bash, linux]
 
 在平常学习过程当中，常使用Bash操作，为提供效率特总结以下常用快捷键。
 
-<!-- more -->
 
 **编辑命令**
 
@@ -46,6 +45,8 @@ tags: [bash, linux]
 > alt + t: 交换光标处和之前的单词
 
 > alt + backspace: 与ctrl+w类似
+
+<!-- more -->
 
 **重新执行命令**
 

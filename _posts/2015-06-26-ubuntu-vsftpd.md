@@ -9,7 +9,6 @@ tags: [ubuntu14.04, vsftpd]
 
 ubuntu14.04 搭建FTP服务器 -- vsftpd的安装和配置
 
-<!-- more -->
 
 1. 更新源列表
 
@@ -24,6 +23,8 @@ ubuntu14.04 搭建FTP服务器 -- vsftpd的安装和配置
 	`pgrep vsftpd`,如果显示一个数字，表示vsftpd服务已经安装成功，并且顺利启动。
 	该数字就是vsftpd服务的进程号。如果没有任何线索，可能服务并没有顺利启动，或者
 	没有安装成功。*请自行查明原因*.
+
+<!-- more -->
 
 4. FTP服务需求
 	* vsftpd 使用stand alone 的方式启动。（或 super daemon）
