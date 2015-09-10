@@ -8,7 +8,6 @@ tags: [Jekyll, Ruby]
 **Jekyll**可以独立的在本地运行，这样方便构建_GitHub_个人博客,官方介绍[安装][1]完成Jekyll只需要几分钟时间，但实际操作的过程当中发现存在很多问题，记录下来以备参考。
 [1]: http://jekyll.bootcss.com/docs/installation/
 
-<!-- more -->
 
 安装依赖工具
 ---
@@ -20,6 +19,8 @@ tags: [Jekyll, Ruby]
 ```
 	$ sudo apt-get install ruby ruby1.9.1 ruby1.9.1-dev node.js
 ```
+
+<!-- more -->
 
 安装Jekyll
 ---

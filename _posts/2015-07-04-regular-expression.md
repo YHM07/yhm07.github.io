@@ -9,7 +9,6 @@ tags: [linux, Regular Expression ]
 
 Linux Shell 正则表达式
 
-<!-- more -->
 
 1. 通配符(wildcards)
 	- * 匹配任意内容
@@ -36,4 +35,6 @@ Linux Shell 正则表达式
 
 4. 扩展正则表达式
 
+
+<!-- more -->
 	
