@@ -7,10 +7,6 @@ category: Wiki
 tags: [ubuntu, MediaWiki]
 ---
 
-Running MediaWiki on Ubuntu 
-
-<!-- more -->
-
 **以下有关MediaWiki的安装参考[Community Help Wiki][1]**
 [1]: https://help.ubuntu.com/community/MediaWiki
 
@@ -20,6 +16,8 @@ Running MediaWiki on Ubuntu
 	sudo apt-get install tasksel
 
 	sudo tasksel install lamp-server
+
+<!-- more -->
 
 在安装lamp-server过程当中要进行以下配置:
 
@@ -31,8 +29,8 @@ Running MediaWiki on Ubuntu
 
 
 ## Install MediaWiki ##
-这里使用的是源码安装，首先下载[MediaWiki][2],然后将Mediawiki拷贝到/var/www/
-目录下并更名为wiki。至此，MediaWiki安装完毕，以下为选安装软件。
+
+这里使用的是源码安装，首先下载[MediaWiki][2],然后将Mediawiki拷贝到**/var/www/**目录下并更名为wiki。至此，MediaWiki安装完毕，以下为可选安装软件。
 
 	sudo apt-get install imagemagick mediawiki-math php5-gd
 
@@ -45,11 +43,11 @@ Running MediaWiki on Ubuntu
 
 Follow the setup instructions.
 
-若此时提示**"Not Found The requested URL /wiki was not found on this server",**这表明默认路径不对，对于**ubuntu14.04**,Apache2的默认根目录为*/var/www/html*,所以我们需要将Apache2的更目录改为我们需要的，
+若此时提示**"Not Found The requested URL /wiki was not found on this server",**这表明默认路径不对，对于**ubuntu14.04**,Apache2的默认根目录为**/var/www/html**,所以我们需要将Apache2的更目录改为我们需要的，
 
 	sudo nano /etc/apache2/sites-enabled/000-default.conf
 
-将其中的*DocumentRoot /var/www/html* 改为*DocumentRoot /var/www* 重启Apache服务
+将其中的**DocumentRoot /var/www/html** 改为**DocumentRoot /var/www** 重启Apache服务
 
 	sudo service apache2 restart
 	
@@ -57,7 +55,9 @@ or
 	
 	sudo /etc/init.d/apache2 restart
 
-[Again](http://localhost/wiki).Follow the setup instructions.
+[Again](http://localhost/wiki).
+
+Follow the setup instructions.
 然后依次进行直到*Connect to database*.
 
 
