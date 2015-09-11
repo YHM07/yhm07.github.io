@@ -18,54 +18,54 @@ tags: [mysql, 数据类型]
 ### 整型(分有符号整型和无符号整型)
 ---
 
-> TINYINT				(一个字节)
-
-> SMALLINT				(两个字节)
-
-> MEDIUMINT				(三个字节)
-
-> INT					(四个字节)
-
-> BIGINT				(八个字节)
+	TINYINT				(一个字节)
+	
+	SMALLINT			(两个字节)
+	
+	MEDIUMINT			(三个字节)
+	
+	INT					(四个字节)
+	
+	BIGINT				(八个字节)
 
 <!-- more -->
 
 ### 浮点型
 ---
 
-> FLOAT[(M,D)]			M是数字总位数，D是小数位数
+	FLOAT[(M,D)]			M是数字总位数，D是小数位数
 
-> DOUBLE[(M,D)]			M是数字总位数，D是小数位数
+	DOUBLE[(M,D)]			M是数字总位数，D是小数位数
 
 ### 日期类型
 ---
 
-> YEAR
+	YEAR
 
-> TIME
+	TIME
 
-> DATE
+	DATE
 
-> DATETIME
+	DATETIME
 
-> TIMESTAMP
+	TIMESTAMP
 
 
 ### 字符型
 ---
 
-> CHAR(M)				定长类型
-
-> VARCHAR(M)			变长类型
-
-> TINETEXT				短文本字符串
-
-> TEXT					长文本字符串
-
-> MEDIUMTEXT			中等长度文本数据
-
-> LONGTEXT				极大文本文件
-
-> ENUM('val1', 'val2',...)			枚举类型
-
-> SET('val1','val2',...)			集合类型
+	CHAR(M)				定长类型
+	
+	VARCHAR(M)			变长类型
+	
+	TINETEXT			短文本字符串
+	
+	TEXT				长文本字符串
+	
+	MEDIUMTEXT			中等长度文本数据
+	
+	LONGTEXT			极大文本文件
+	
+	ENUM('val1', 'val2',...)		枚举类型
+	
+	SET('val1','val2',...)			集合类型

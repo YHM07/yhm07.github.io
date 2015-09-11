@@ -25,11 +25,11 @@ tags: [Python, virtualenv, virtualenvwrapper]
 
 <!-- more -->
 
-## 安装
+### 安装
 
 	sudo pip install virtualenv
 
-## Virtualenv基本使用
+### Virtualenv基本使用
 
 	virtualenv ENV
 
@@ -40,7 +40,7 @@ or
 
 **注：以上命令中的*ENV*以及*py3env*均是目录,运行以上命令会在当前文件夹下生成对应目录*ENV* 和 _py3env_,`--no-site-packages`指定不包括依赖于系统的安装包**
 
-## 激活虚拟环境
+### 激活虚拟环境
 
 	source ENV/bin/active
 
@@ -48,11 +48,11 @@ or
 	
 	source python3/bin/active
 
-## 离开虚拟环境
+### 离开虚拟环境
 
 	deactive
 
-## 删除虚拟环境
+### 删除虚拟环境
 
 **直接删除目录即可**
 
@@ -72,12 +72,12 @@ or
 
 [2]: http://virtualenvwrapper.readthedocs.org/en/latest/index.html
 
-## 安装Virtualenvwapper
+### 安装Virtualenvwapper
 
 	# 首先，要确保virtualenv已经安装
 	sudo pip install virtualenvwapper 
 
-## 加载virtualenvwrapper
+### 加载virtualenvwrapper
 
 在`$HOME/.bashrc`中添加：
 
@@ -89,13 +89,13 @@ or
 
 	source ~/.bashrc
 
-## 创建虚拟环境目录
+### 创建虚拟环境目录
 
 默认创建的虚拟环境位于`~/.virtualenvs`目录下，可以通过环境变量`$WORKON_HOME`来定制。如果`~/.virtualenvs/`目录存在,继续，否则创建目录用来存放虚拟环境。
 
 	mkdir $HOME/.virtualenvs
 
-## 创建虚拟环境
+### 创建虚拟环境
 
 	mkvirtualenv py2env
 
@@ -103,43 +103,43 @@ or
 
 > (py2env)ubuntu@ubuntu-virtual-machine:~$
 
-## 列出所有虚拟环境
+### 列出所有虚拟环境
 
 	lsvirtualenv 
 
-## 激活虚拟环境
+### 激活虚拟环境
 
 	workon py2env
 
-## 进入虚拟环境目录
+### 进入虚拟环境目录
 
 	cdvirtualenv
 
-## 进入虚拟环境的site-packages目录
+### 进入虚拟环境的site-packages目录
 
 	cdsitepackages
 
-## 列出site-packages目录的所有软件包
+### 列出site-packages目录的所有软件包
 
 	lssitepackages
 
-## 停止虚拟环境
+### 停止虚拟环境
 
 	deactive
 
-## 删除虚拟环境
+### 删除虚拟环境
 
 	rmvirtualenv py2env
 
 # 重建Python环境
 
-## 冻结
+### 冻结
 
 所谓`冻结(freeze)`环境，就是将当前环境的软件包等固定下来。
 
 	pip freeze > requirements.txt
 
-## 重建
+### 重建
 
 `重建(rebuild)`环境就是在部署的时候，在生产环境安装对应版本的软件包，不要出现版本兼容等问题。
 
