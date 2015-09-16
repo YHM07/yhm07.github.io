@@ -7,13 +7,19 @@ category: "python"
 tags: [python,pip,centos]
 ---
 
-**以下所有安装过程都基于CentOS Linux release 7.1.1503 (Core),python版本2.7.5**
+## 安装环境：
+
+- CentOS Linux release 7.1.1503 (Core)
+
+- python版本2.7.5
 
 ## Install pip
 
 参考安装说明[Install pip][1]安装pip。
 
 ## TroubleShooting
+
+在安装完成pip之后，在使用pip安装一些软件包的时候发现存在一些意想不到的问题，大多都是因为依赖的原因，列举如下。
 
 ### InsecurePlatformWaring问题
 
@@ -22,6 +28,8 @@ tags: [python,pip,centos]
 > /home/centos/.virtualenvs/py2env/lib/python2.7/site-packages/pip/\_vendor/requests/packages/urllib3/util/ssl\_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
 
 解决方案：
+
+<!-- more -->
 
 ---
 	
@@ -64,13 +72,32 @@ tags: [python,pip,centos]
 
 	yum -y install openssl-devel
 
+### pip 命令自动补全
+
+	pip completion --bash >> ~/.profile
+
+or 
+
+	pip completion --bash >> ~/.bashrc
+
+然后：
+
+	source ~/.profile 
+
+or 
+
+	source ~/.bashrc
+
+**本人采用的是第二种情况，能够正确补全**
 
 
 ## 参考
 
 - [pip 安装说明][1]
-
+- [Python包管理工具——Pipip][2]
 
 [1]: https://pip.pypa.io/en/stable/installing/
+[2]: http://lesliezhu.github.io/public/2014-11-08-pip.html
+
 
 
