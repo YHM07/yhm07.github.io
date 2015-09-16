@@ -95,9 +95,11 @@ or
 
 - [pip 安装说明][1]
 - [Python包管理工具——Pipip][2]
+- [pip 用户手册][3]
 
 [1]: https://pip.pypa.io/en/stable/installing/
 [2]: http://lesliezhu.github.io/public/2014-11-08-pip.html
+[3]: https://pip.pypa.io/en/stable/
 
 
 
