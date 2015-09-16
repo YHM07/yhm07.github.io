@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "pip安装过程当中的一些问题"
+title:  "编译安装python3.4过程当中的一些问题"
 keywords: ""
 description: ""
 category: "python" 
@@ -16,6 +16,10 @@ tags: [python,pip,centos]
 ## Install pip
 
 参考安装说明[Install pip][1]安装pip。
+
+	wget https://bootstrap.pypa.io/get-pip.py 
+
+	python get-pip.py 
 
 ## TroubleShooting
 
@@ -89,6 +93,40 @@ or
 	source ~/.bashrc
 
 **本人采用的是第二种情况，能够正确补全**
+
+### ipython 安装后不能智能补全
+
+首先，编译安装了python3.4, 然后利用virtualenv, 创建了独立的python3.4的开发环境
+
+	virtualenv --no-site-packages --python=python3.4 ~/.virtualenvs/py3env
+
+利用pip安装ipython，结果出现了Waring，而且没有高亮显示，不能TAB补全。
+
+> WARNING: IPython History requires SQLite, your history will not be saved.
+
+> WARNING: Readline services not available or not loaded.
+
+> WARNING: The auto-indent feature requires the readline library
+
+解决方案
+
+---
+
+- 安装SQLite-devel
+
+```
+	yum install sqlite-devel
+```
+
+- 安装readline-devel
+ 
+```
+	yum install readline-devel 
+```
+
+- 重新编译安装python3.4，成功。
+
+
 
 
 ## 参考
