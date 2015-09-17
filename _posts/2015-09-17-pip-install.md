@@ -9,12 +9,14 @@ tags: [python,pip,centos]
 
 ## 安装环境：
 
-- CentOS Linux release 7.1.1503 (Core)
+---
+- **CentOS Linux release 7.1.1503 (Core)**
 
-- python版本2.7.5
+- **python版本2.7.5**
 
 ## Install pip
 
+---
 参考安装说明[Install pip][1]安装pip。
 
 	wget https://bootstrap.pypa.io/get-pip.py 
@@ -23,6 +25,7 @@ tags: [python,pip,centos]
 
 ## TroubleShooting
 
+---
 在安装完成pip之后，在使用pip安装一些软件包的时候发现存在一些意想不到的问题，大多都是因为依赖的原因，列举如下。
 
 ### InsecurePlatformWaring问题
@@ -54,6 +57,7 @@ tags: [python,pip,centos]
 
 ### 安装MySQL-python
 
+---
 首先需要确认系统是否已经安装**MySQL-python**
 
 	rpm -qa | grep MySQL-python
@@ -68,16 +72,22 @@ tags: [python,pip,centos]
 
 ### 安装过程当中缺少一些文件
 
+---
 > c/\_cffi_backend.c:13:17: fatal error: ffi.h: No such file or directory
+
+解决方案：
 
 	yum -y install libffi-devel
 
 > build/temp.linux-x86_64-2.7/\_openssl.c:400:25: fatal error: openssl/aes.h: No such file or directory
 
+解决方案：
+
 	yum -y install openssl-devel
 
 ### pip 命令自动补全
 
+---
 	pip completion --bash >> ~/.profile
 
 or 
@@ -96,6 +106,7 @@ or
 
 ### ipython 安装后不能智能补全
 
+---
 首先，编译安装了python3.4, 然后利用virtualenv, 创建了独立的python3.4的开发环境
 
 	virtualenv --no-site-packages --python=python3.4 ~/.virtualenvs/py3env
@@ -131,6 +142,7 @@ or
 
 ## 参考
 
+---
 - [pip 安装说明][1]
 - [Python包管理工具--pip][2]
 - [pip 用户手册][3]
