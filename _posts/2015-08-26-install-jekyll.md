@@ -20,7 +20,6 @@ tags: [Jekyll, Ruby]
 	$ sudo apt-get install ruby ruby1.9.1 ruby1.9.1-dev node.js
 ```
 
-<!-- more -->
 
 安装Jekyll
 ---
@@ -34,6 +33,8 @@ tags: [Jekyll, Ruby]
 
 **如果遇到问题可能时因为没有安装必要的依赖,请认真检查错误提示，或查看[troubltshooting][3]**
 [3]: http://jekyll.bootcss.com/docs/troubleshooting/
+
+<!-- more -->
 
 附加功能
 ---
