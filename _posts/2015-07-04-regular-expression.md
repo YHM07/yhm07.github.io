@@ -22,6 +22,8 @@ Linux Shell 正则表达式
 
 > 正则表达式用来在文件中匹配符合条件的字符串，正则是包含匹配。
 
+<!-- more -->
+
 ## 基础正则表达式
 
 >
@@ -39,5 +41,13 @@ Linux Shell 正则表达式
 ## 扩展正则表达式
 
 
-<!-- more -->
+## 参考
+
+1. [python正则表达式指南][1]
+
+2. [正则表达式30分钟入门教程][3]
+
+[1]: http://www.cnblogs.com/huxi/archive/2010/07/04/1771073.html
+
+[2]: http://deerchao.net/tutorials/regex/regex.htm
 	
