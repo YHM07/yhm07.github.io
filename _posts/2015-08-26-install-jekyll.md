@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Install Jekyll"
-category: "wiki"
+title: "Ubuntu14.04安装Jekyll"
+category: "linux"
 tags: [Jekyll, Ruby]
 ---
 
@@ -9,8 +9,7 @@ tags: [Jekyll, Ruby]
 [1]: http://jekyll.bootcss.com/docs/installation/
 
 
-安装依赖工具
----
+## 安装依赖工具
 
 ---
 
@@ -20,9 +19,18 @@ tags: [Jekyll, Ruby]
 	$ sudo apt-get install ruby ruby1.9.1 ruby1.9.1-dev node.js
 ```
 
+注：CentOS7.1 上安装node.js
 
-安装Jekyll
----
+首先需要安装EPEL库
+
+	sudo yum install epel-release
+
+然后安装node.js
+
+	sudo yum -y install nodejs
+
+
+## 安装Jekyll
 
 ---
 终端运行以下命令
@@ -36,8 +44,7 @@ tags: [Jekyll, Ruby]
 
 <!-- more -->
 
-附加功能
----
+## 附加功能
 
 ---
 
@@ -48,8 +55,7 @@ tags: [Jekyll, Ruby]
 ```
 
 
-Troubltshooting
----
+## Troubltshooting
 
 ---
 **如果按照上述操作，理论上Jekyll已经正确安装，可以运行`jekyll -v`查看版本号
@@ -69,4 +75,12 @@ Troubltshooting
 - 其次，运行`gem list --local`查看本地已安装文件以及其版本号。
 - 发现，Celluloid存在两个版本，分别是0.17.0 和 0.16.0,将0.17.0版本删除，解决问题。`gem uninstall elluloid`,然后选择对应的0.17.0版本将其删除。
 
+附：CentOS7.1 安装Jekyll出现以下问题的解决方案
 
+	ruby -v			# ruby 2.0.0p598 (2014-11-13) [x86_64-linux]
+
+	gem -v			# 2.4.8
+
+> Dependency Error: Yikes! It looks like you don't have jekyll-coffeescript installed
+
+解决方案: 运行`gem install json`即可.
