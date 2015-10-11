@@ -75,4 +75,12 @@ tags: [Jekyll, Ruby]
 - 其次，运行`gem list --local`查看本地已安装文件以及其版本号。
 - 发现，Celluloid存在两个版本，分别是0.17.0 和 0.16.0,将0.17.0版本删除，解决问题。`gem uninstall elluloid`,然后选择对应的0.17.0版本将其删除。
 
+附：CentOS7.1 安装Jekyll出现以下问题的解决方案
 
+	ruby -v			# ruby 2.0.0p598 (2014-11-13) [x86_64-linux]
+
+	gem -v			# 2.4.8
+
+> Dependency Error: Yikes! It looks like you don't have jekyll-coffeescript installed
+
+解决方案: 运行`gem install json`即可.
