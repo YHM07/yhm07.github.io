@@ -70,6 +70,16 @@ tags: [python,pip,centos]
 
 	pip install MySQL-python
 
+附：ubuntu14.04 LTS 的解决方案
+
+	sudo apt-get install python-dev
+
+	sudo apt-get install mysql-server
+
+	sudo apt-get install libmysqlclient-dev
+
+	pip install MySQL-python
+
 ### 安装过程当中缺少一些文件
 
 ---
