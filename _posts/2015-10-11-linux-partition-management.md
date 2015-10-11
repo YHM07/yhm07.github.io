@@ -34,8 +34,9 @@ Linux支持的文件系统类型介绍
 首先介绍一下硬盘类型:
 * IDE, ATA (速率：133Mbps,并行总线)
 * SCSI (速率: 320Mbps, 并行总线)
-* SATA (速率: 6Gbps, 串行总线)
+* SATAiii (速率: 6Gbps, 串行总线)
 * USB2.0 (速率: 480Mbps)
+* USB3.0 (速率: 5Gbps)
 不同硬盘类型,在linux系统上有不同命名方式,IDE类型硬盘:**/dev/hda**; 
 SATA,USB,SCSI以及SAS都以**/dev/sda**方式命名.
 
