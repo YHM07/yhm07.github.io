@@ -116,3 +116,178 @@ tags: [bash]
 	- <
 	- -n string 测试指定字符串是否为空,空则真,不空为假
 	- -s string 测试指定字符串是否不空,不空为真,空为假
+
+## 组合测试
+
+组合测试条件
+	-a and 与关系
+	-o or 或关系
+	!  not 非
+
+# 8-2 bash脚本编程 -- case语句及脚本选项  2015/11/6
+
+1. 面向过程
+	- 控制结构
+		* 顺序结构
+		* 选择结构
+		* 循环结构
+2. 选择结构 
+```
+if CONDITION; then 
+	statement
+	...
+fi 
+
+if CONDITION; then 
+	statement
+	...
+elif CONDITION; then
+	statement
+	...
+else 
+	statement
+	...
+fi 
+```
+3. case语句 
+case SWITCH in 
+value1)
+	statement
+	...
+	;;
+value2)
+	statement
+	...
+	;;
+*)	
+	statement
+	...
+	;;
+esac
+
+# 练习
+
+1. 写一个脚本,可以接受选项及参数,而后能获取每一个选项,及选项的参数,并能根据选项及参数做出特定的操作;比如
+
+	e.g. adminuser.sh --add tom,jerry --del tom blarc -v|--verbose -h|--help
+#!/bin/bash 
+set -o nounset                        # Treat unset variables as an error
+
+\#DEBUG() {
+\#       [ "$_DEBUG" == "true" ] && $@ || :
+\#}
+declare -i DEBUG=0
+declare -i ADDUSER=0
+declare -i DELUSER=0
+
+\#for argv in "$@"; do 
+while [ $# -gt 0 ]; do
+\#       if [ -n $1 ]; then 
+        case $1 in
+                -v|--verbose)
+                        DEBUG=1
+                        shift
+                        ;;
+                -h|--help)
+                        echo "Usage: `basename $0` --[add|del] USERLIST -v|--verbose -h|--help"
+                        shift
+                        exit 0
+                        ;;
+                --add)
+                        ADDUSER=1
+                        shift 
+                        ADDUSERLIST=$1
+                        shift
+                        ;;
+                --del)
+                        DELUSER=1
+                        shift 
+                        DELUSERLIST=$1
+                        shift
+                        ;;
+                *)
+                        echo "Usage: `basename $0` --[add|del] USERLIST -v|--verbose -h|--help"
+                        exit 1
+                        ;;
+
+        esac
+#       fi
+done
+
+IFS=','
+if [ $ADDUSER -eq 1 ]; then
+        for user in $ADDUSERLIST; do 
+                if id $user &> /dev/null; then 
+                        [ $DEBUG -eq 1 ] && echo "$user exist"
+                else
+                        useradd $user 
+                        echo "$user" | passwd --stdin "$user" &> /dev/null 
+                        chage -d 0 "$user"
+                        [ $DEBUG -eq 1 ] && echo "$user added"
+                fi
+        done 
+fi
+
+if [ $DELUSER -eq 1 ]; then 
+        for user in $DELUSERLIST; do
+                if id $user &> /dev/null; then 
+                        userdel -r $user 
+                        [ $DEBUG -eq 1 ] && echo "$user has deleted"
+                else
+                        [ $DEBUG -eq 1 ] && echo "$user does's not exist"
+                fi
+        done
+fi
+
+2. 写一个脚本showlogged.sh,其用法格式为:
+
+	showlogged.sh -v -c -h|--help
+
+	- -h选项只能单独使用,用于显示帮助信息;
+	- -c选项,显示当前系统上登陆的所有用户数;
+	- 如果同时使用-v选项,则既显示同时登陆的用户数,又显示登陆用户的相关信息
+	
+	Logged users: 4.
+	
+	They are:
+	root 	tty2 	Feb 18 02:41
+	root 	pts/1 	Mar 8  08:36 (192.168.1.100)
+	root 	pts/5 	Mar 8  08:36 (192.168.1.101)
+	hadoop 	pts/6 	Mar 8  08:36 (192.168.1.103)
+#!/bin/bash
+set -o nounset                        # Treat unset variables as an error
+
+declare -i CNT=0
+declare -i VERBOSE=0
+while [ $# -gt 0 ]; do 
+    case $1 in 
+            -h|--help)
+                    echo "Usage: `basename $0` -v -c -h|--help"
+                    exit 0
+                    ;;
+            -c)
+                    CNT=1
+                    shift 
+                    ;;
+            -v)
+                    VERBOSE=1
+                    shift 
+                    ;;
+            *)
+                echo "Usage: `basename $0` -v -c -h|--help"
+                exit 1
+                ;;
+
+    esac
+done
+
+if [ $CNT -eq 1 ]; then 
+    COUNT=`who | wc -l`
+    echo "Logged users: $COUNT"
+    if [ $VERBOSE -eq 1 ]; then
+    	echo "They are:"
+    	who
+	fi
+fi
+
+
