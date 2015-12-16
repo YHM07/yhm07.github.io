@@ -5,6 +5,7 @@ keywords: ""
 baseurl: ""
 url: "//yhm07.github.io"
 highlighter: pygments
+gems: [jekyll-paginate]
 paginate: 5
 author:
     name: H.M.Yang
