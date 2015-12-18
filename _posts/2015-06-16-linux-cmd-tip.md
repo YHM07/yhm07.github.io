@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Linux cmd tips"
+title:  "Linux命令行技巧"
 keywords: "linux cmd"
 description: ""
-category: "wiki" 
+category: "Wiki" 
 tags: [linux ]
 ---
 

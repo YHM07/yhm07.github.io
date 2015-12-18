@@ -3,7 +3,7 @@ layout: post
 title:  "tcpdump summary"
 keywords: ""
 description: ""
-category: "linux" 
+category: "Linux" 
 tags: [tcpdump, linux, cmd]
 ---
 

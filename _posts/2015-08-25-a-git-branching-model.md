@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Git branching model"
-category: "wiki" 
+category: "Wiki" 
 tags: [git]
 ---
 

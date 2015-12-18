@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ubuntu14.04安装Jekyll"
-category: "linux"
+category: "Linux"
 tags: [Jekyll, Ruby]
 ---
 

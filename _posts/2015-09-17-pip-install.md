@@ -3,7 +3,7 @@ layout: post
 title:  "编译安装python3.4过程当中的一些问题"
 keywords: ""
 description: ""
-category: "python" 
+category: "Python" 
 tags: [python,pip,centos]
 ---
 
