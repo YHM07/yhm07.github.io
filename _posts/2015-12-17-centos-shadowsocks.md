@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CentOS 配置ShadowSocks服务.md"
-category: "linux"
+category: "Linux"
 tags: [CentOS6.7,ShadowSocks]
 ---
 
@@ -10,6 +10,7 @@ tags: [CentOS6.7,ShadowSocks]
 * [Shadowsocks 使用说明](https://github.com/shadowsocks/shadowsocks/wiki/Shadowsocks-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)
 
 * [配置文件说明](https://github.com/shadowsocks/shadowsocks/wiki/Configuration-via-Config-File)
+
 **ShadowSocks** 一个可以穿透防火墙的快速代理。
 
 实验环境
@@ -18,6 +19,8 @@ tags: [CentOS6.7,ShadowSocks]
 $ cat /etc/centos-release 
 CentOS release 6.7 (Final)
 ```
+
+<!-- more -->
 
 ## ShadowSocks 服务端安装
 ---
@@ -80,9 +83,52 @@ $ cat /etc/shadowsocks.json
 
 	sudo sserrver -d stop 
 
+帮助文档
+
+	sserrver --help 
+
 日志文件:
 	
 	sudo less /var/log/shadowsocks.log 
+
+## ShadowSocks 客户端配置
+---
+
+客户端下载:
+
+* [ishadowsocks](http://www.ishadowsocks.com/)
+* [shadowsocks](https://shadowsocks.org/en/download/clients.html)
+* [shadowsocks-gui](https://github.com/shadowsocks/shadowsocks-gui)
+
+对于linux操作系统,如*ubuntu,centos*可以按照**ShadowSocks 服务端安装**安装，这样默认会安装**sslocal**命令,关于该命令的使用如下:
+
+帮助文档
+	
+	sslocal --help 
+
+Proxy options:
+>
+-c CONFIG              path to config file
+-s SERVER_ADDR         server address
+-p SERVER_PORT         server port, default: 8388
+-b LOCAL_ADDR          local binding address, default: 127.0.0.1
+-l LOCAL_PORT          local port, default: 1080
+-k PASSWORD            password
+-m METHOD              encryption method, default: aes-256-cfb
+-t TIMEOUT             timeout in seconds, default: 300
+--fast-open            use TCP_FASTOPEN, requires Linux 3.7+
+
+启动ShadowSocks客户端
+
+	sslocal -s server-ip -p server-port -l 1080 -k password -t 600 -m aes-256-cfb 
+
+为了简化一些默认参数只要服务器端没有改变,客户端可以不用重复说明
+
+	sslocal -s server-ip -p server-port -k password 
+
+配合**nohup**和**&**可以后台运行,关闭终端不影响使用
+
+	nohup sslocal -s server-ip -p server-port -l 1080 -k password -m aes-256-cfb &
 
 ## 附录
 ---
