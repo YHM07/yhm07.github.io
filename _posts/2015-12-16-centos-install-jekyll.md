@@ -10,6 +10,8 @@ tags: [CentOS6.7, jekyll, rbenv, ruby]
 参考：[gist:rbenv-install-and-using.md][1]
 [1]: https://gist.github.com/sandyxu/8aceec7e436a6ab9621f
 
+因**gist**登陆困难,特就此文章转载至[个人博客](http://blog.csdn.net/yhm07/article/details/50339937)方便查看。
+
 开发环境: 
 
 ```bash
@@ -21,7 +23,8 @@ CentOS release 6.7 (Final)
 
 <!-- more -->
 
-1. [安装 rbenv][2]
+## [安装 rbenv][2]
+
 
 rbenv的源代码托管在[github][2]，在终端中，从 github 上将 rbenv 源码 clone 到本地，然后设置 $PATH。
 
@@ -35,7 +38,7 @@ source ~/.bashrc
 source ~/.bash_profile 
 ```
 
-2. [安装 ruby-build][3]
+## [安装 ruby-build][3]
 
 [ruby-build][3] 用来编译安装 Ruby 源码，如果选择手动编译，可不使用这个工具。
 
@@ -57,7 +60,7 @@ sudo yum install -y gcc openssl-devel libyaml-devel libffi-devel readline-devel 
 git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 ```
 
-3. 安装 Ruby
+## 安装 Ruby
 
 查看可用的 ruby版本
 
@@ -71,30 +74,30 @@ git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-buil
 
 	rbenv versions
 
-4. 设置ruby以及rbenv的使用
+## 设置ruby以及rbenv的使用
 
 rbenv 中的 Ruby 版本有三个不同的作用域：全局(global)，本地(local)，当前终端(shell)。
 
 查找版本的优先级是 当前终端 > 本地 > 全局。
 
-4.1 设置全局版本
+* 设置全局版本
 
 全局版本是在没有找到“当前终端”或“本地”作用域的设置时执行。通过以下命令设置：
 
 	rbenv global 2.2.3
 
-4.2 设置本地版本
+* 设置本地版本
 
 “本地”作用域是针对各个项目的，通过项目文件夹中的 .rbenv-version 这个文件进行管理，需要将相应的 Ruby 版本号写入这个文件。所以一般设置这个选项就可以了，这个过程可以通过以下命令执行：
 	rbenv local 2.2.3
 
-4.3 设置当前终端版本
+* 设置当前终端版本
 
 “当前终端”作用域的优先级最高。通过以下命令设置：
 
 	rbenv shell 2.2.3
 
-4.4 使用系统Ruby
+* 使用系统Ruby
 
 如果要使用系统原有的 Ruby，则通过 system 指定：
 
@@ -108,11 +111,11 @@ which ruby  # ~/.rbenv/shims/ruby
 rbenv version # 2.2.3 (set by ~/.rbenv/version)
 ```
 
-5. 安装 Jekyll 
+## 安装 Jekyll 
 
 	gem install jekyll 
 
-6. Troubleshooting
+## Troubleshooting
 
 > 运行`jekyll serve`时出现类似**cannot load such file -- redcarpet**字眼的错误,需要安装对于的软件,例如此时需要安装**redcarpet**
 

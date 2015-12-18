@@ -3,15 +3,15 @@ layout: post
 title:  "linux学习笔记三--sed and grep"
 keywords: ""
 description: ""
-category: "linux" 
+category: "Linux" 
 tags: [sed|grep]
 ---
 
 
-# 6-2 流编辑器sed  2015/11/3
-@(linux)[sed|grep]
+### 6-2 流编辑器sed  2015/11/3
 
-<!-- more -->
+**@(linux)[sed|grep]**
+
 
 ## sed(stream editor)
 
@@ -19,91 +19,104 @@ tags: [sed|grep]
 
 sed 命令格式:
 
-> sed [option] 'AddressCommnd' file,... # Address与Command之间不需要空格
+	sed [option] 'AddressCommnd' file,... # Address与Command之间不需要空格
 
-1. option 
-	- -n 静默模式,不再显示模式空间中的内容
-	- -i 直接修改源文件
-	- -e SCRIPT -e SCRIPT 
-	- -f /path/to/script 
-	- -r 表示使用扩展正则表达式
+option 
+>
+- -n 静默模式,不再显示模式空间中的内容
+- -i 直接修改源文件
+- -e SCRIPT -e SCRIPT 
+- -f /path/to/script 
+- -r 表示使用扩展正则表达式
 
-2. Address
-	- StartLine,EndLine # 从StartLine到EndLine
-	- /pattern/ # 使用正则表达式指定模式
-	- /pattern1/,/pattern2/ # 第一次被pattern1匹配的行开始,至第一次陪pattern2匹配到的行结束
-	- LineNumber # 指定行号
-		* $ 表示最后一行
-		# * $-1 表示倒数第二行
-	- StarLine,+N 表示从StartLine开始,向后的N行
+<!-- more -->
 
-3. Command
-	-d 删除符合条件的行
-	-p 显示符合条件的行
-	-a \string 在指定行后追加新行,内容为string
-	-i \string 在指定行前追加新行,内容为string
-	-r /path/to/somefile 将指定文件内容添加至符合条件的行处
-	-w /path/to/somefile 将地址指定范围内的行保存至指定文件中
-	-s/pattern/replacement/flag 查找并替换,默认替换每行中第一次被模式匹配到的串.flag: g表示全局替换;i忽略大小写;N表示替换第几个.分隔符可以是任意的,只要对应即可,如s###,s@@@.
-	- \(\), 反向引用,\1,\2,..., & 引用模式中匹配到的整个字符串
+Address
+> 
+- StartLine,EndLine # 从StartLine到EndLine
+- /pattern/ # 使用正则表达式指定模式
+- /pattern1/,/pattern2/ # 第一次被pattern1匹配的行开始,至第一次陪pattern2匹配到的行结束
+- LineNumber # 指定行号
+	* $ 表示最后一行
+	* $-1 表示倒数第二行
+- StarLine,+N 表示从StartLine开始,向后的N行
+
+Command
+>
+* -d 删除符合条件的行
+* -p 显示符合条件的行
+* -a \string 在指定行后追加新行,内容为string
+* -i \string 在指定行前追加新行,内容为string
+* -r /path/to/somefile 将指定文件内容添加至符合条件的行处
+* -w /path/to/somefile 将地址指定范围内的行保存至指定文件中
+* -s/pattern/replacement/flag 查找并替换,默认替换每行中第一次被模式匹配到的串.flag: g表示全局替换;i忽略大小写;N表示替换第几个.分隔符可以是任意的,只要对应即可,如s###,s@@@.
+* - \(\), 反向引用,\1,\2,..., & 引用模式中匹配到的整个字符串
 
 ## grep及正则表达式
+---
 
-### grep, egrep, fgrep
+### grep 根据搜索模式文本,并将符合模式的行显示出来
 
-1. grep 根据搜索模式文本,并将符合模式的行显示出来
 
- pattern 文本字符或正则表达式的元字符组合而成的匹配条件
+	grep [options] pattern [FILE,...]
 
- grep [options] pattern [FILE,...]
-	* -i ignore case 
-	* --color=[WHEN] 
-	* -v 反向查找,显示没有被模式匹配的行
-	* -o 只显示被模式匹配到的字符串
-	* -E 使用扩展的正则表达式(egrep)
-	* -A NUM 显示pattern匹配行及其后NUM行
-	* -B NUM 显示pattern匹配行及其前NUM行
-	* -C NUM 显示pattern匹配行及其前后各NUM行
+> pattern 文本字符或正则表达式的元字符组合而成的匹配条件
 
-2. 正则表达式 REGular EXPression, REGEXP
-	* 元字符：
-		- . 匹配任意单个字符
-		- [] 匹配指定范围内的任意单个字符
-		- [^] 匹配指定范围外的任意单个字符
-		- [:digit:] 数字
-		- [:lower:] 小写字母
-		- [:upper:] 大写字母
-		- [:punct:] 标点符号
-		- [:space:] 空白字符
-		- [:alpha:] a-zA-Z
-		- [:alnum:] a-zA-Z0-9
-		
-	* 匹配次数(默认贪婪模式) 
-		- \* 匹配其前面的字符任意次,包括零次
-		- .\* 匹配任意长度的任意字符	
-		- \? 匹配其前面的字符一次或零次(可有可无)
-		- \{m,n\} 匹配其前面的字符至少m次,至多n次
-	* 位置锚定
-		- ^ 锚定行首,此字符后的任意内容必须出现在行首
-		- $ 锚定行尾,此字符前的任意内容必须出现在行尾
-		- ^$ 空白行
-		- \< 或 \b 锚定词首,其后面的任意字符必须作为单词首部出现
-		- \> 或 \b 锚定词尾,其前面的任意字符必须作为单词尾部出现
-	* 分组 \( \) 
-		- 后向引用 \n 表示第n个左括号以及对应的右括号的内容
+options 
+>
+* -i ignore case 
+* --color=[WHEN] 
+* -v 反向查找,显示没有被模式匹配的行
+* -o 只显示被模式匹配到的字符串
+* -E 使用扩展的正则表达式(egrep)
+* -A NUM 显示pattern匹配行及其后NUM行
+* -B NUM 显示pattern匹配行及其前NUM行
+* -C NUM 显示pattern匹配行及其前后各NUM行
 
-3. 扩展正则表达式 (Extend REGular EXPression)
-	- + 匹配其前面的字符至少一次
-	- {m,n} 匹配次数
-	- () 分组, \1, \2, \3, .., \9
-	- | 表示或者
+### 正则表达式 REGular EXPression, REGEXP
+
+>
+* 元字符：
+	- . 匹配任意单个字符
+	- [] 匹配指定范围内的任意单个字符
+	- [^] 匹配指定范围外的任意单个字符
+	- [:digit:] 数字
+	- [:lower:] 小写字母
+	- [:upper:] 大写字母
+	- [:punct:] 标点符号
+	- [:space:] 空白字符
+	- [:alpha:] a-zA-Z
+	- [:alnum:] a-zA-Z0-9		
+* 匹配次数(默认贪婪模式) 
+	- \* 匹配其前面的字符任意次,包括零次
+	- .\* 匹配任意长度的任意字符	
+	- \? 匹配其前面的字符一次或零次(可有可无)
+	- \{m,n\} 匹配其前面的字符至少m次,至多n次
+* 位置锚定
+	- ^ 锚定行首,此字符后的任意内容必须出现在行首
+	- $ 锚定行尾,此字符前的任意内容必须出现在行尾
+	- ^$ 空白行
+	- \< 或 \b 锚定词首,其后面的任意字符必须作为单词首部出现
+	- \> 或 \b 锚定词尾,其前面的任意字符必须作为单词尾部出现
+* 分组 \( \) 
+	- 后向引用 \n 表示第n个左括号以及对应的右括号的内容
+
+### 扩展正则表达式 (Extend REGular EXPression)
+
+>
+- + 匹配其前面的字符至少一次
+- {m,n} 匹配次数
+- () 分组, \1, \2, \3, .., \9
+- | 表示或者
 	
- e.g. ifconfig | grep -E "\b([1-9]|[1-9][0-9]|1[0-9][0-9]|2[01][0-9]|22[0-3]\b)(\.\b([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-4])\b){2}\.\b([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-4])\b"
+	e.g. ifconfig | grep -E "\b([1-9]|[1-9][0-9]|1[0-9][0-9]|2[01][0-9]|22[0-3]\b)(\.\b([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-4])\b){2}\.\b([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-4])\b"
 
- e.g. ifconfig | grep -E "(\<([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]\>)\.){3}(\<[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]\>)"
+	e.g. ifconfig | grep -E "(\<([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]\>)\.){3}(\<[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]\>)"
 
-## 练习1
+## 练习
+---
 
+```bash 
 1. 删除/etc/grub.conf文件中行首的空白字符
 	- sed -r 's/^[[:space:]]+//' /etc/grub.conf
 	- awk '{sub(/^[[:space:]]\*/, ""); print}' /etc/grub.conf
@@ -121,19 +134,25 @@ sed 命令格式:
 7. 取出一个文件路径的目录名称
 	- sed 's#\(^/.*\)/\(.*\)#\1#' dir.name
 	- echo "/etc/rc.d/" | sed -r 's#^(/.*/)[^/]+/?#\1#'
+```
 	
-## 字符串比较
+## 附:字符串比较
+---
 
 字符测试
-	- == 测试是否相等,相等为真,不等为假
-	- != 测试是否不等,不等为真,相等为假
-	- >
-	- <
-	- -n string 测试指定字符串是否为空,空则真,不空为假
-	- -s string 测试指定字符串是否不空,不空为真,空为假
 
-## 练习2
+>
+- == 测试是否相等,相等为真,不等为假
+- != 测试是否不等,不等为真,相等为假
+- >
+- <
+- -n string 测试指定字符串是否为空,空则真,不空为假
+- -s string 测试指定字符串是否不空,不空为真,空为假
 
+## 练习
+---
+
+```bash 
 1. 传递一个用户名参数给脚本,判断此用户的用户名跟其基本组的组名是否一致,并将结果显示出来
 \#!/bin/bash
 set -o nounset                        # Treat unset variables as an error
@@ -220,9 +239,12 @@ else
                 echo "$3 is the max number!"
         fi
 fi
+```
 
-## 练习3
+## 练习
+---
 
+```bash 
 1. 向每个用户问好
 	awk 'BEGIN{FS=":";}{print "Hello",$1,",your shell is ",$7;}END{print NR}'
 
@@ -309,8 +331,8 @@ for USERS in `cat /etc/passwd`; do
                 NC+=1
         fi
 done
-
 echo "BASH, ${BC}users, they are:"
 echo "$BINUSER"
 echo "NOLOGIN, ${NC}users,they are:"
 echo "$NOLOGINUSER"
+````

@@ -49,7 +49,7 @@ $ cat /etc/shadowsocks.json
 	"server_port":8989,
 	"local_address": "127.0.0.1",
 	"local_port":1080,
-	"password":"MyPass",
+	"password":"password",
 	"timeout":600,
 	"method":"aes-256-cfb"
 }
@@ -108,15 +108,15 @@ $ cat /etc/shadowsocks.json
 
 Proxy options:
 >
--c CONFIG              path to config file
--s SERVER_ADDR         server address
--p SERVER_PORT         server port, default: 8388
--b LOCAL_ADDR          local binding address, default: 127.0.0.1
--l LOCAL_PORT          local port, default: 1080
--k PASSWORD            password
--m METHOD              encryption method, default: aes-256-cfb
--t TIMEOUT             timeout in seconds, default: 300
---fast-open            use TCP_FASTOPEN, requires Linux 3.7+
+* -c CONFIG              path to config file
+* -s SERVER_ADDR         server address
+* -p SERVER_PORT         server port, default: 8388
+* -b LOCAL_ADDR          local binding address, default: 127.0.0.1
+* -l LOCAL_PORT          local port, default: 1080
+* -k PASSWORD            password
+* -m METHOD              encryption method, default: aes-256-cfb
+* -t TIMEOUT             timeout in seconds, default: 300
+* --fast-open            use TCP_FASTOPEN, requires Linux 3.7+
 
 启动ShadowSocks客户端
 
