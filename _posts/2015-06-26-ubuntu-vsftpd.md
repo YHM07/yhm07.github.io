@@ -3,7 +3,7 @@ layout: post
 title:  "ubuntu14.04 搭建FTP服务器 -- vsftpd的安装和配置"
 keywords: "ubuntu14.04 vsftpd"
 description: "how to setup vsftpd on ubuntu14.04"
-category: "wiki" 
+category: "Wiki" 
 tags: [ubuntu14.04, vsftpd]
 ---
 

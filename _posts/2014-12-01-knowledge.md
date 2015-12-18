@@ -3,7 +3,7 @@ layout: post
 title: "Knowledge"
 keywords: "Knowledge"
 description: ""
-category: wiki
+category: Wiki
 tags: [Knowledge]
 ---
 

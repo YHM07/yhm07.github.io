@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bash shortcuts"
-category: "linux"
+category: "Linux"
 tags: [bash, linux]
 ---
 
