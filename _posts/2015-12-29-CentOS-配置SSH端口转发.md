@@ -7,7 +7,8 @@ tags: [CentOS,SSH]
 
 # ssh 端口转发
 
-**参考：**
+**参考:**
+
 * [IBM:实战 SSH 端口转发](https://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/)
 * [小马过河: SSH 远程端口转发](http://lvii.github.io/system/2013/10/08/ssh-remote-port-forwarding/)
 * [ssh端口转发实验](https://gist.github.com/suziewong/4420286)
@@ -29,6 +30,8 @@ e.g. 从某主机的 80 端口开启到本地主机 8080 端口的隧道
 	ssh -N -L8080:localhost:80 远程主机
 	
 现在你可以直接在浏览器中输入http://localhost:8080 访问这个网站。
+
+<!-- more -->
 
 经常用到的三个转发命令是：
 
