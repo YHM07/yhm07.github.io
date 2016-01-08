@@ -14,6 +14,8 @@ tags: [CentOS,SSH]
 * [ssh端口转发实验](https://gist.github.com/suziewong/4420286)
 * [SSH25个命令 + 深入SSH端口转发细节](http://blog.csdn.net/moubenmao_jun/article/details/10392061)
 
+<!-- more -->
+
 ssh 命令参数
 
 > - -f 后台认证用户/密码，通常和-N连用，不用登录到远程主机;
@@ -31,7 +33,6 @@ e.g. 从某主机的 80 端口开启到本地主机 8080 端口的隧道
 	
 现在你可以直接在浏览器中输入http://localhost:8080 访问这个网站。
 
-<!-- more -->
 
 经常用到的三个转发命令是：
 
